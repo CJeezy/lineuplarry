@@ -24,13 +24,12 @@ function LandingPage(props) {
 			</div>
 		</div>
 
-		<div className='load-wrapper'>
-			<LoadLineups
-                    agent={props.selectedAgent}
-                    map={props.selectedMap}
-                    side={props.selectedSide}>
-            </LoadLineups>
-
+		<div className='lineup-page'>
+				<LoadLineups
+					agent={props.selectedAgent}
+					map={props.selectedMap}
+					side={props.selectedSide}>
+				</LoadLineups>
 		</div></>
     )
   }
@@ -38,11 +37,12 @@ function LandingPage(props) {
 function TitleBar(){
     return(
         <div className='title'>
-            <div className='bar'></div>
             <div className='title-tags'>
                 <p className='red-text'>LINEUP</p>
                 <p className='blue-text'>LARRYS</p>
+				
             </div>
+			Play post! I have lineups!
         </div>
     )
 }
@@ -50,9 +50,9 @@ function TitleBar(){
 function SelectAgent({buttonStyle, agent, setAgent}){
     const agents = getAgents();
     return(
-        <div className="block">
-			<p className="block-title">
-				<span className="main-text">SELECT</span> AN AGENT
+        <div className="data-box">
+			<p className="data-box-title">
+				<span className="main-text">AGENT</span>
 			</p>
 			<AgentList
 				buttonStyle={buttonStyle}
@@ -75,7 +75,7 @@ function AgentList({ buttonStyle, agents, agent, setAgent }) {
 					agent === agents[i] ? "" : buttonStyle,
 				].join(" ")}
 				onClick={()=>setAgent(_agent)}>
-				<img alt="list of agents" src={"/images/agents/" + agents[i] + ".webp"} />
+				<img alt="agent list" src={"/images/agents/" + agents[i] + ".webp"} />
 			</div>
 		);
 	}
@@ -86,9 +86,9 @@ function AgentList({ buttonStyle, agents, agent, setAgent }) {
 function SelectMap({ buttonStyle, map, setMap }) {
 	const maps = getMaps();
 	return (
-		<div className="block">
-			<p className="block-title">
-				<span className="main-text">SELECT</span> MAP
+		<div className="data-box">
+			<p className="data-box-title">
+				<span className="main-text">MAP</span>
 			</p>
 			<MapList
 				buttonStyle={buttonStyle}
@@ -127,9 +127,9 @@ function capitalizeFirstLetter(string) {
 function SelectSide({buttonStyle, side, setSide}){
     const sides = getSide();
     return(
-        <div className="block">
-			<p className="block-title">
-				<span className="main-text">SELECT</span> SIDE
+        <div className="data-box">
+			<p className="data-box-title">
+				<span className="main-text">SIDE</span>
 			</p>
             <SideList 
                 buttonStyle={buttonStyle}
@@ -158,12 +158,12 @@ function SideList ({buttonStyle, sides, side, setSide}){
         )
     }
     console.log(side)
-    return <div className="maps-list">{SideList}</div>
+    return <div className="side-list">{SideList}</div>
 }
 
 function LoadLineups({agent,map,side}) {
 	return (
-		<div className="load-block">
+		<div className="data-box">
 			<LoadedMaps agent={agent} map={map} side={side}></LoadedMaps>
 		</div>
 	);
