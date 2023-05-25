@@ -1,39 +1,37 @@
-import React, { useState, useEffect } from "react";
-import {Link, useNavigate} from 'react-router-dom';
 import { getAgents } from '../../models/agents';
 import { getMaps } from "../../models/maps";
 import { getSide } from "../../models/side";
 import "../css/LandingPage.css"
 
+import BrimAscent from "../../lineupdata/BrimAscent";
+
 function LandingPage(props) {
 
     return (
-      <div className='landing-page'>
-          <div className='wrapper'>
-              <TitleBar></TitleBar>
-              <SelectAgent
+      <><div className='landing-page'>
+			<div className='wrapper'>
+				<TitleBar></TitleBar>
+				<SelectAgent
 					agent={props.selectedAgent}
 					setAgent={props.setSelectedAgent}></SelectAgent>
-              <SelectMap
-                    map={props.selectedMap}
-                    setMap={props.setSelectedMap}></SelectMap>
-                <SelectSide
-                    side={props.selectedSide}
-                    setSide={props.setSelectedSide}>
-                </SelectSide>
-                <LoadLineups
+				<SelectMap
+					map={props.selectedMap}
+					setMap={props.setSelectedMap}></SelectMap>
+				<SelectSide
+					side={props.selectedSide}
+					setSide={props.setSelectedSide}>
+				</SelectSide>
+			</div>
+		</div>
+
+		<div className='load-wrapper'>
+			<LoadLineups
                     agent={props.selectedAgent}
                     map={props.selectedMap}
                     side={props.selectedSide}>
+            </LoadLineups>
 
-                </LoadLineups>
-                <SubmitButton
-                    _agent={props.SelectAgent}
-                    _map={props.SelectedMap}
-                    _side={props.SelectSide}>
-                </SubmitButton>
-          </div>
-      </div>
+		</div></>
     )
   }
 
@@ -77,7 +75,7 @@ function AgentList({ buttonStyle, agents, agent, setAgent }) {
 					agent === agents[i] ? "" : buttonStyle,
 				].join(" ")}
 				onClick={()=>setAgent(_agent)}>
-				<img src={"/images/agents/" + agents[i] + ".webp"} />
+				<img alt="list of agents" src={"/images/agents/" + agents[i] + ".webp"} />
 			</div>
 		);
 	}
@@ -90,7 +88,7 @@ function SelectMap({ buttonStyle, map, setMap }) {
 	return (
 		<div className="block">
 			<p className="block-title">
-				<span className="main-text">SELECT</span> A MAP
+				<span className="main-text">SELECT</span> MAP
 			</p>
 			<MapList
 				buttonStyle={buttonStyle}
@@ -131,7 +129,7 @@ function SelectSide({buttonStyle, side, setSide}){
     return(
         <div className="block">
 			<p className="block-title">
-				<span className="main-text">SELECT</span> A SIDE
+				<span className="main-text">SELECT</span> SIDE
 			</p>
             <SideList 
                 buttonStyle={buttonStyle}
@@ -163,51 +161,34 @@ function SideList ({buttonStyle, sides, side, setSide}){
     return <div className="maps-list">{SideList}</div>
 }
 
-function LoadLineups({agent,map,maps}) {
+function LoadLineups({agent,map,side}) {
 	return (
-		<div className="block">
-			<p className="block-title">
-				<span className="main-text">LOAD</span>
-			</p>
-			<LoadedMaps agent={agent} map={map} maps={maps}></LoadedMaps>
+		<div className="load-block">
+			<LoadedMaps agent={agent} map={map} side={side}></LoadedMaps>
 		</div>
 	);
 }
 
 
 function LoadedMaps(props){
-	var loadedMaps = []
-
-	if(props.maps !== undefined && (props.map !== undefined && props.agent !== undefined)){
-
-		if(props.map in props.maps && props.agent in props.maps[props.map] ){
-			var mapList = props.maps[props.map][props.agent];
-
-			for (const [key, value] of Object.entries(mapList)) {
-	
-				loadedMaps.push(<a href={"/map/"+key} key={key}><div className="map-button">{mapList[key].name}</div></a>)
-			}
-		}
-		
+	if(props.agent === "brimstone" && props.side === "defense"){
+		return(<NoLineups/>)
 	}
+	else if(props.agent === "brimstone" && props.map === "ascent"){
+		return(<BrimAscent></BrimAscent>)
+	}
+
+
 	
-	return <div className="map-list">{loadedMaps}</div>;
 }
 
-function SubmitButton({ buttonStyle,_agent,_map,_side}) {
-	let navigate = useNavigate(); 
-	const routeChange = () =>{ 
-		let path = `lineups`; 
-		navigate(path,{state:{agent:_agent,map:_map,side:_side}});
-	  }
-	return (
-
-		<button className={["submit-query", buttonStyle].join(" ")} onClick={routeChange}>
-			+ SUMBIT
-		</button>
-	);
+function NoLineups(){
+	return(
+		<div>
+			No lineups needed for this side or map! Only post-plant molly lineups are available
+		</div>
+	)
 }
-
 
 
 export default LandingPage

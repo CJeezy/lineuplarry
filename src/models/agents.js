@@ -1,4 +1,4 @@
 export function getAgents(){
-    const agents = ["astra","breach","brimstone","chamber","cypher","fade","gekko","harbor","jett","kayo","killjoy","neon","omen","raze","reyna","sage","skye","sova","viper","yoru"]
+    const agents = ["brimstone","fade","kayo","sova","viper",]
     return agents;
   }

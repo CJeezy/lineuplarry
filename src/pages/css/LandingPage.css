@@ -11,6 +11,11 @@
 	min-width: 300px;
 	margin-bottom: 150px;
 }
+
+.load-wrapper{
+	background-color: #232323;
+}
+
 .landing-page .title {
 	height: 100px;
 	display: flex;
@@ -32,6 +37,13 @@
 }
 
 .landing-page .block {
+	margin-top: 30px;
+	background-color: #232323;
+	padding: 20px;
+	border-radius: 10px;
+}
+
+.landing-page .load-block{
 	margin-top: 30px;
 	background-color: #232323;
 	padding: 20px;
@@ -113,8 +125,6 @@
 }
 
 .landing-page .selected-agent {
-	height: 50px;
-	width: 50px;
 	padding: 1px;
 	border-radius: 10px;
 	background-color: #d1d1d1;
@@ -125,13 +135,6 @@
 	height: 50px;
 	width: 50px;
 }
-
-.landing-page .maps-found {
-	margin-top: 10px;
-}
-
-
-
 
 .landing-page .map-list {
 	margin-top: 30px;
