@@ -25,11 +25,11 @@ function LandingPage(props) {
 		</div>
 
 		<div className='lineup-page'>
-				<LoadLineups
-					agent={props.selectedAgent}
-					map={props.selectedMap}
-					side={props.selectedSide}>
-				</LoadLineups>
+			<LoadLineups
+				agent={props.selectedAgent}
+				map={props.selectedMap}
+				side={props.selectedSide}>
+			</LoadLineups>
 		</div></>
     )
   }

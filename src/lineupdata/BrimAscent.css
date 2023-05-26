@@ -1,9 +1,27 @@
-.lineup-page{
-    background-color: #161616;
-	width: 100%;
-	color:#fff;
-	padding-top: 150px;
+.container{
+	position: relative;
 	display: flex;
-	justify-content: center;
+}
+
+.button{
+	background-color: #161616;
+}
+.map-image{
+	/*change dimensions if needed*/
+}
+
+.spike-image{
+	position: absolute;
+	width: 30px;
+	cursor: pointer;
+
+	top: 175px;
+	left: 330px;
+}
+
+.lineup-info{
+	display: inline-block;
+	text-align: top;
+	background-color: #161616;
 }
 
