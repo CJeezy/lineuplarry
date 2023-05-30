@@ -3,6 +3,7 @@ import { Container } from 'react-bootstrap'
 import Brimstone from '../lineupdata/Brimstone'
 
 import '../maps/MapInfo.css'
+import Killjoy from '../lineupdata/Killjoy'
 
 function AscentInfo(props) {
     const {agent} = props
@@ -19,6 +20,9 @@ function AscentInfo(props) {
     const renderBasedOnImage = () => {
         if(agent === 'brimstone'){
             return(<div><Brimstone selectedImage={selectedImage}/></div>)
+        }
+        else if(agent === 'killjoy'){
+            return(<div><Killjoy selectedImage={selectedImage}/></div>)
         }
     }
   return (

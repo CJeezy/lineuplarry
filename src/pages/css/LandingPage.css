@@ -113,31 +113,6 @@
 	cursor: pointer;
 }
 
-/*--------------Sides-------------------*/ 
-
-.landing-page .side{
-    padding: 10px;
-	border-radius: 10px;
-	background-color: #424242;
-	box-shadow: 2px 3px 5px #1d1d1d;
-	cursor: pointer;
-}
-.landing-page .side-list {
-	margin-top: 20px;
-	display: flex;
-	flex-wrap: wrap;
-	justify-content: center;
-	gap: 10px;
-}
-
-.landing-page .selected-side {
-	padding: 10px;
-	border-radius: 10px;
-	background-color: #d1d1d1;
-	box-shadow: 2px 3px 5px #1d1d1d;
-	color:#000000;
-	cursor: pointer;
-}
 
 .landing-page .agent img {
 	height: 50px;

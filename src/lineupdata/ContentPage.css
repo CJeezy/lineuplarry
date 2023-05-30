@@ -1,0 +1,12 @@
+
+.picture-frame{
+    width: 560px;
+}
+
+.picture-frame img{
+    transition: transform 0.3s
+}
+
+.picture-frame img:hover{
+    transform: scale(2)
+}

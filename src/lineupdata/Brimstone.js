@@ -19,6 +19,7 @@ function Brimstone(props) {
                         </div>
                 </div>
                 );
+                
         case 'haven-a-corner' :
             return(
                 <div className='lineup-info'>
@@ -32,6 +33,7 @@ function Brimstone(props) {
                         </div>
                 </div>
                 );
+
         case 'haven-b-default' :
             return(
                 <div className='lineup-info'>
@@ -45,6 +47,7 @@ function Brimstone(props) {
                         </div>
                 </div>
                 );
+
         case 'haven-c-default' :
             return(
                 <div className='lineup-info'>
@@ -58,6 +61,7 @@ function Brimstone(props) {
                         </div>
                 </div>
                 );
+
         case 'haven-c-corner' :
             return(
                 <div className='lineup-info'>
@@ -84,8 +88,8 @@ function Brimstone(props) {
                             picture-in-picture; web-share" allowfullscreen></iframe>
                         </div>
                 </div>
-                );
-        
+                );     
+
         case 'ascent-a-dice' :
             return(
                 <div className='lineup-info'>
