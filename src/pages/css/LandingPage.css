@@ -36,7 +36,6 @@
 .landing-page .title .red-text {
 	color: rgb(146, 0, 0);
 }
-
 /*-----------------CSS for selection boxes and when selected--------------------------*/ 
 
 .landing-page .data-box {
@@ -44,6 +43,7 @@
 	background-color: #232323;
 	padding: 20px;
 	border-radius: 10px;
+	margin: 10px
 }
 
 .landing-page .data-box-title {

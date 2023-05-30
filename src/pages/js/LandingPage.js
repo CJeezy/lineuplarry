@@ -185,7 +185,7 @@ function LoadedMaps(props){
 function NoLineups(){
 	return(
 		<div>
-			No lineups needed for this side or map! Only post-plant molly lineups are available
+			AGGRESSIVE DEFENSE MOLLY LINEUPS COMING SOON
 		</div>
 	)
 }

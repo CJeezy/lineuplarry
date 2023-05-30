@@ -10,13 +10,20 @@
 	/*change dimensions if needed*/
 }
 
+.gen-spot{
+	position: absolute;
+	cursor: pointer;
+}
+
+.dice-spot{
+	position: absolute;
+	cursor: pointer;
+}
+
 .spike-image{
 	position: absolute;
 	width: 30px;
 	cursor: pointer;
-
-	top: 175px;
-	left: 330px;
 }
 
 .lineup-info{
@@ -25,3 +32,9 @@
 	background-color: #161616;
 }
 
+.agent-image{
+	position: absolute;
+	width: 30px;
+	cursor: pointer;
+    background: rgb(255, 47, 47); 
+}
