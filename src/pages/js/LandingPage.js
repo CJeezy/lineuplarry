@@ -1,9 +1,9 @@
 import { getAgents } from '../../models/agents';
 import { getMaps } from "../../models/maps";
-import { getSide } from "../../models/side";
 import "../css/LandingPage.css"
 
-import BrimAscent from "../../lineupdata/BrimAscent";
+import HavenInfo from "../../maps/HavenInfo";
+import AscentInfo from '../../maps/AscentInfo';
 
 function LandingPage(props) {
 
@@ -17,10 +17,7 @@ function LandingPage(props) {
 				<SelectMap
 					map={props.selectedMap}
 					setMap={props.setSelectedMap}></SelectMap>
-				<SelectSide
-					side={props.selectedSide}
-					setSide={props.setSelectedSide}>
-				</SelectSide>
+
 			</div>
 		</div>
 
@@ -42,7 +39,14 @@ function TitleBar(){
                 <p className='blue-text'>LARRYS</p>
 				
             </div>
-			Play post! I have lineups!
+			<div className='side-text'>
+				Play Post! I have lineups!
+				<div className='disclaimer'>
+					*This site is dedicated only to post-plant molly lineups <br></br>
+					For other types of lineups and such go to <a href ='https://valoplant.gg/'>Valoplant.gg</a>
+				</div>
+			</div>
+			
         </div>
     )
 }
@@ -124,71 +128,31 @@ function capitalizeFirstLetter(string) {
 	return string.charAt(0).toUpperCase() + string.slice(1);
 }
 
-function SelectSide({buttonStyle, side, setSide}){
-    const sides = getSide();
-    return(
-        <div className="data-box">
-			<p className="data-box-title">
-				<span className="main-text">SIDE</span>
-			</p>
-            <SideList 
-                buttonStyle={buttonStyle}
-				sides={sides}
-				side={side}
-				setSide={setSide}
-            ></SideList>
-		</div>
-    )
-}
 
-function SideList ({buttonStyle, sides, side, setSide}){
-    const SideList = [];
-
-    for (var i = 0; i < sides.length; i++){
-        const _side = sides[i]
-        SideList.push(
-            <div
-                key={i}
-                className={[side === sides[i] ? "selected-side" : "side", side === sides[i]?"":buttonStyle].join(
-                    " "
-                )}
-                onClick={() => setSide(_side)}>
-                {capitalizeFirstLetter(sides[i])}
-            </div>
-        )
-    }
-    console.log(side)
-    return <div className="side-list">{SideList}</div>
-}
-
-function LoadLineups({agent,map,side}) {
-	return (
-		<div className="data-box">
-			<LoadedMaps agent={agent} map={map} side={side}></LoadedMaps>
-		</div>
-	);
-}
-
-
-function LoadedMaps(props){
-	if(props.agent === "brimstone" && props.side === "defense"){
-		return(<NoLineups/>)
+function LoadLineups({agent,map}) {
+	if(map==='haven'){
+		return(<HavenInfo agent={agent}/>)
 	}
-	else if(props.agent === "brimstone" && props.map === "ascent"){
-		return(<BrimAscent></BrimAscent>)
+	else if (map==='ascent'){
+		return (<AscentInfo agent={agent}/>)
 	}
+}
 
+
+// function LoadedMaps(props){
+// 	// if(props.agent === "brimstone" && props.side === "defense"){
+// 	// 	return(<NoLineups/>)
+// 	// }
+// 	// else if(props.agent === "brimstone" && props.map === "ascent" && props.side === 'attack'){
+// 	// 	return(<BrimAscent></BrimAscent>)
+// 	// }
+// 	if(props.map === 'haven'){
+// 		return(<HavenInfo pro/>)
+// 	}
 
 	
-}
+// }
 
-function NoLineups(){
-	return(
-		<div>
-			AGGRESSIVE DEFENSE MOLLY LINEUPS COMING SOON
-		</div>
-	)
-}
 
 
 export default LandingPage

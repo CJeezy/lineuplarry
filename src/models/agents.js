@@ -1,4 +1,4 @@
 export function getAgents(){
-    const agents = ["brimstone","fade","kayo","sova","viper",]
+    const agents = ["brimstone","killjoy","kayo","sova","viper",]
     return agents;
   }

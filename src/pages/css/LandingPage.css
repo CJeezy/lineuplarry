@@ -33,6 +33,14 @@
 	font-size: 2.6rem;
 }
 
+.side-text{
+	font-size: larger;
+}
+
+.disclaimer{
+	font-size: x-small;
+}
+
 .landing-page .title .red-text {
 	color: rgb(146, 0, 0);
 }
