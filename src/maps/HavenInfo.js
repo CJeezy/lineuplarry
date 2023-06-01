@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
 import { Container } from 'react-bootstrap'
-import Brimstone from '../lineupdata/Brimstone'
+import AgentForMap from '../lineupdata/AgentForMap'
 
 import '../maps/MapInfo.css'
 
@@ -16,13 +16,6 @@ function HavenInfo(props) {
         // Perform actions based on the clicked image
         setSelectedImage(imageId)
     };
-
-    const renderBasedOnImage = () => {
-        if(agent === 'brimstone'){
-            return(<div><Brimstone selectedImage={selectedImage}/></div>)
-        }
-    }
-
 
   return (
     <Container>
@@ -66,8 +59,7 @@ function HavenInfo(props) {
                         onClick={() => {handleImageClick('haven-c-corner')
                                         setIsToggled(!isToggled)}}>
                     </img>
-
-                    {renderBasedOnImage()}
+                    <AgentForMap agent={agent} selectedImage={selectedImage}/>
             </div>
         </Container>
   )

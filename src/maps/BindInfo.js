@@ -4,7 +4,7 @@ import '../maps/MapInfo.css'
 
 import AgentForMap from '../lineupdata/AgentForMap'
 
-function AscentInfo(props) {
+function BindInfo(props) {
     const {agent} = props
 
     const [isToggled, setIsToggled] = useState(false)
@@ -19,35 +19,35 @@ function AscentInfo(props) {
   return (
     <Container>
             <div className="container">
-                <img className='map-image' src = './images/maps/ascent.webp' alt='ascent minimap'/>
-                    {/*A GENERATOR */}
+                <img className='map-image' src = './images/maps/bind.webp' alt='bind minimap'/>
+                    {/*A Truck */}
                     <img className='spike-image' src='./images/abilities/spike.webp' alt='spike' 
                         id={'1'}
-                        style={{left: '330px', top: '175px'}}
-                        onClick={() => {handleImageClick('ascent-a-gen')
+                        style={{left: '680px', top: '335px'}}
+                        onClick={() => {handleImageClick('bind-a-truck')
                                         setIsToggled(!isToggled)}}>
                     </img>
-                    {/*A DICE */}
+                    {/*A Triple */}
                     <img className='spike-image' src='./images/abilities/spike.webp' alt='spike' 
                         id={'1'}
-                        style={{left: '315px', top: '115px'}}
-                        onClick={() => {handleImageClick('ascent-a-dice')
-                                        setIsToggled(!isToggled)}}>
-                    </img>
-
-                    {/* B DEFAULT */}
-                    <img className='spike-image' src='./images/abilities/spike.webp' alt='spike' 
-                        id={'1'}
-                        style={{left: '270px', top: '795px'}}
-                        onClick={() => {handleImageClick('ascent-b-default')
+                        style={{left: '740px', top: '325px'}}
+                        onClick={() => {handleImageClick('bind-a-triple')
                                         setIsToggled(!isToggled)}}>
                     </img>
 
-                    {/* B CORNER */}
+                    {/* B Left Box */}
                     <img className='spike-image' src='./images/abilities/spike.webp' alt='spike' 
                         id={'1'}
-                        style={{left: '310px', top: '830px'}}
-                        onClick={() => {handleImageClick('ascent-b-corner')
+                        style={{left: '250px', top: '285px'}}
+                        onClick={() => {handleImageClick('bind-b-left')
+                                        setIsToggled(!isToggled)}}>
+                    </img>
+
+                    {/* B Right Box */}
+                    <img className='spike-image' src='./images/abilities/spike.webp' alt='spike' 
+                        id={'1'}
+                        style={{left: '300px', top: '285px'}}
+                        onClick={() => {handleImageClick('bind-c-right')
                                         setIsToggled(!isToggled)}}>
                     </img>
                     <AgentForMap agent={agent} selectedImage={selectedImage}/>
@@ -56,4 +56,4 @@ function AscentInfo(props) {
   )
 }
 
-export default AscentInfo
+export default BindInfo

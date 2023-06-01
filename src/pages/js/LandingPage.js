@@ -4,6 +4,12 @@ import "../css/LandingPage.css"
 
 import HavenInfo from "../../maps/HavenInfo";
 import AscentInfo from '../../maps/AscentInfo';
+import BindInfo from '../../maps/BindInfo';
+import FractureInfo from '../../maps/FractureInfo'
+import IceboxInfo from '../../maps/IceboxInfo'
+import PearlInfo from '../../maps/PearlInfo'
+import SplitInfo from '../../maps/SplitInfo'
+import LotusInfo from '../../maps/LotusInfo'
 
 function LandingPage(props) {
 
@@ -135,6 +141,18 @@ function LoadLineups({agent,map}) {
 	}
 	else if (map==='ascent'){
 		return (<AscentInfo agent={agent}/>)
+	}
+
+	switch(map){
+		case 'ascent' : return(<AscentInfo agent={agent}/>)
+		case 'haven' : return(<HavenInfo agent={agent}/>)
+		case 'bind' : return(<BindInfo agent={agent}/>)
+		case 'fracture' : return(<FractureInfo agent={agent}/>)
+		case 'icebox' : return(<IceboxInfo agent={agent}/>)
+		case 'pearl' : return(<PearlInfo agent={agent}/>)
+		case 'split' : return(<SplitInfo agent={agent}/>)
+		case 'lotus' : return(<LotusInfo agent={agent}/>)
+		default : ; 
 	}
 }
 
