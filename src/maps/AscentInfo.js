@@ -4,6 +4,9 @@ import Brimstone from '../lineupdata/Brimstone'
 
 import '../maps/MapInfo.css'
 import Killjoy from '../lineupdata/Killjoy'
+import Kayo from '../lineupdata/Kayo'
+import Sova from '../lineupdata/Sova'
+import Viper from '../lineupdata/Viper'
 
 function AscentInfo(props) {
     const {agent} = props
@@ -23,6 +26,15 @@ function AscentInfo(props) {
         }
         else if(agent === 'killjoy'){
             return(<div><Killjoy selectedImage={selectedImage}/></div>)
+        }
+        else if(agent === 'kayo'){
+            return(<div><Kayo selectedImage={selectedImage}/></div>)
+        }
+        else if(agent === 'sova'){
+            return(<div><Sova selectedImage={selectedImage}/></div>)
+        }
+        else if(agent === 'viper'){
+            return(<div><Viper selectedImage={selectedImage}/></div>)
         }
     }
   return (
