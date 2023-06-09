@@ -132,6 +132,21 @@ function Brimstone(props) {
                 </div>
                 );
         
+        case 'bind-a-truck':
+            return(
+                <div className='lineup-info'>
+                    <img className='agent-image' src='./images/agents/brimstone.webp' alt='brimstone'
+                        style={{ left: '375px', top: '745px' }}>
+                    </img>
+                        <div class="video-wrap">
+                            <iframe width="560" height="315" src="https://www.youtube.com/embed/YD0L3nbWrh4?start=152" title="YouTube video player" 
+                            frameBorder="0" allow="accelerometer; clipboard-write; encrypted-media; gyroscope; 
+                            picture-in-picture; web-share" allowfullscreen></iframe>
+                        </div>
+                </div>
+                );
+        
+    
     }
 }
 
