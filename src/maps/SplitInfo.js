@@ -18,35 +18,35 @@ function SplitInfo(props) {
   return (
     <Container>
             <div className="container">
-                <img className='map-image' src = './images/maps/split.webp' alt='bind minimap'/>
-                    {/*A Truck */}
+                <img className='map-image' src = './images/maps/split.webp' alt='split minimap'/>
+                    {/*A Default */}
                     <img className='spike-image' src='./images/abilities/spike.webp' alt='spike' 
                         id={'1'}
-                        style={{left: '680px', top: '335px'}}
-                        onClick={() => {handleImageClick('bind-a-truck')
+                        style={{left: '250px', top: '100px'}}
+                        onClick={() => {handleImageClick('split-a-default')
                                         setIsToggled(!isToggled)}}>
                     </img>
-                    {/*A Triple */}
+                    {/*A Corner */}
                     <img className='spike-image' src='./images/abilities/spike.webp' alt='spike' 
                         id={'1'}
-                        style={{left: '740px', top: '325px'}}
-                        onClick={() => {handleImageClick('bind-a-triple')
-                                        setIsToggled(!isToggled)}}>
-                    </img>
-
-                    {/* B Left Box */}
-                    <img className='spike-image' src='./images/abilities/spike.webp' alt='spike' 
-                        id={'1'}
-                        style={{left: '250px', top: '285px'}}
-                        onClick={() => {handleImageClick('bind-b-left')
+                        style={{left: '240px', top: '45px'}}
+                        onClick={() => {handleImageClick('split-a-amain')
                                         setIsToggled(!isToggled)}}>
                     </img>
 
-                    {/* B Right Box */}
+                    {/* B Default */}
                     <img className='spike-image' src='./images/abilities/spike.webp' alt='spike' 
                         id={'1'}
-                        style={{left: '300px', top: '285px'}}
-                        onClick={() => {handleImageClick('bind-c-right')
+                        style={{left: '330px', top: '855px'}}
+                        onClick={() => {handleImageClick('split-b-default')
+                                        setIsToggled(!isToggled)}}>
+                    </img>
+
+                    {/* B B-main */}
+                    <img className='spike-image' src='./images/abilities/spike.webp' alt='spike' 
+                        id={'1'}
+                        style={{left: '280px', top: '865px'}}
+                        onClick={() => {handleImageClick('split-b-bmain')
                                         setIsToggled(!isToggled)}}>
                     </img>
                     <AgentForMap agent={agent} selectedImage={selectedImage}/>

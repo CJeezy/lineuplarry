@@ -19,34 +19,42 @@ function LotusInfo(props) {
     <Container>
             <div className="container">
                 <img className='map-image' src = './images/maps/lotus.webp' alt='bind minimap'/>
-                    {/*A Truck */}
+                    {/*A Default */}
                     <img className='spike-image' src='./images/abilities/spike.webp' alt='spike' 
                         id={'1'}
-                        style={{left: '680px', top: '335px'}}
-                        onClick={() => {handleImageClick('bind-a-truck')
+                        style={{left: '855px', top: '360px'}}
+                        onClick={() => {handleImageClick('lotus-a-default')
                                         setIsToggled(!isToggled)}}>
                     </img>
-                    {/*A Triple */}
+                    {/*A Hut */}
                     <img className='spike-image' src='./images/abilities/spike.webp' alt='spike' 
                         id={'1'}
-                        style={{left: '740px', top: '325px'}}
-                        onClick={() => {handleImageClick('bind-a-triple')
-                                        setIsToggled(!isToggled)}}>
-                    </img>
-
-                    {/* B Left Box */}
-                    <img className='spike-image' src='./images/abilities/spike.webp' alt='spike' 
-                        id={'1'}
-                        style={{left: '250px', top: '285px'}}
-                        onClick={() => {handleImageClick('bind-b-left')
+                        style={{left: '840px', top: '325px'}}
+                        onClick={() => {handleImageClick('lotus-a-corner')
                                         setIsToggled(!isToggled)}}>
                     </img>
 
-                    {/* B Right Box */}
+                    {/* B DEFAULT */}
                     <img className='spike-image' src='./images/abilities/spike.webp' alt='spike' 
                         id={'1'}
-                        style={{left: '300px', top: '285px'}}
-                        onClick={() => {handleImageClick('bind-c-right')
+                        style={{left: '410px', top: '425px'}}
+                        onClick={() => {handleImageClick('lotus-b-default')
+                                        setIsToggled(!isToggled)}}>
+                    </img>
+
+                    {/* C Mound */}
+                    <img className='spike-image' src='./images/abilities/spike.webp' alt='spike' 
+                        id={'1'}
+                        style={{left: '140px', top: '485px'}}
+                        onClick={() => {handleImageClick('lotus-c-mound')
+                                        setIsToggled(!isToggled)}}>
+                    </img>
+
+                    {/* C Safe */}
+                    <img className='spike-image' src='./images/abilities/spike.webp' alt='spike' 
+                        id={'1'}
+                        style={{left: '140px', top: '430px'}}
+                        onClick={() => {handleImageClick('lotus-c-safe')
                                         setIsToggled(!isToggled)}}>
                     </img>
                     <AgentForMap agent={agent} selectedImage={selectedImage}/>

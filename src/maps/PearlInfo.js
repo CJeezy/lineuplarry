@@ -18,35 +18,36 @@ function PearlInfo(props) {
   return (
     <Container>
             <div className="container">
-                <img className='map-image' src = './images/maps/pearl.webp' alt='bind minimap'/>
-                    {/*A Truck */}
+                <img className='map-image' src = './images/maps/pearl.webp' alt='pearl minimap'/>
+                    {/*A Default */}
                     <img className='spike-image' src='./images/abilities/spike.webp' alt='spike' 
                         id={'1'}
-                        style={{left: '680px', top: '335px'}}
-                        onClick={() => {handleImageClick('bind-a-truck')
-                                        setIsToggled(!isToggled)}}>
-                    </img>
-                    {/*A Triple */}
-                    <img className='spike-image' src='./images/abilities/spike.webp' alt='spike' 
-                        id={'1'}
-                        style={{left: '740px', top: '325px'}}
-                        onClick={() => {handleImageClick('bind-a-triple')
+                        style={{left: '850px', top: '325px'}}
+                        onClick={() => {handleImageClick('pearl-a-default')
                                         setIsToggled(!isToggled)}}>
                     </img>
 
-                    {/* B Left Box */}
+                    {/*A Cubby */}
                     <img className='spike-image' src='./images/abilities/spike.webp' alt='spike' 
                         id={'1'}
-                        style={{left: '250px', top: '285px'}}
-                        onClick={() => {handleImageClick('bind-b-left')
+                        style={{left: '910px', top: '345px'}}
+                        onClick={() => {handleImageClick('pearl-a-cubby')
+                                        setIsToggled(!isToggled)}}>
+                    </img>
+                    
+                    {/* B Safe */}
+                    <img className='spike-image' src='./images/abilities/spike.webp' alt='spike' 
+                        id={'1'}
+                        style={{left: '130px', top: '340px'}}
+                        onClick={() => {handleImageClick('pearl-b-safe')
                                         setIsToggled(!isToggled)}}>
                     </img>
 
-                    {/* B Right Box */}
+                    {/* B Quick */}
                     <img className='spike-image' src='./images/abilities/spike.webp' alt='spike' 
                         id={'1'}
-                        style={{left: '300px', top: '285px'}}
-                        onClick={() => {handleImageClick('bind-c-right')
+                        style={{left: '140px', top: '445px'}}
+                        onClick={() => {handleImageClick('pearl-b-quick')
                                         setIsToggled(!isToggled)}}>
                     </img>
                     <AgentForMap agent={agent} selectedImage={selectedImage}/>

@@ -47,7 +47,7 @@ function BindInfo(props) {
                     <img className='spike-image' src='./images/abilities/spike.webp' alt='spike' 
                         id={'1'}
                         style={{left: '300px', top: '285px'}}
-                        onClick={() => {handleImageClick('bind-c-right')
+                        onClick={() => {handleImageClick('bind-b-right')
                                         setIsToggled(!isToggled)}}>
                     </img>
                     <AgentForMap agent={agent} selectedImage={selectedImage}/>

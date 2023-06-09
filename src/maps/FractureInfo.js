@@ -24,30 +24,30 @@ function FractureInfo(props) {
                     <img className='spike-image' src='./images/abilities/spike.webp' alt='spike' 
                         id={'1'}
                         style={{left: '870px', top: '515px'}}
-                        onClick={() => {handleImageClick('fracture-a-truck')
+                        onClick={() => {handleImageClick('fracture-a-safe')
                                         setIsToggled(!isToggled)}}>
                     </img>
                     {/*A Triple */}
                     <img className='spike-image' src='./images/abilities/spike.webp' alt='spike' 
                         id={'1'}
-                        style={{left: '740px', top: '325px'}}
-                        onClick={() => {handleImageClick('fracture-a-triple')
+                        style={{left: '830px', top: '435px'}}
+                        onClick={() => {handleImageClick('fracture-a-amain')
                                         setIsToggled(!isToggled)}}>
                     </img>
 
                     {/* B Left Box */}
                     <img className='spike-image' src='./images/abilities/spike.webp' alt='spike' 
                         id={'1'}
-                        style={{left: '250px', top: '285px'}}
-                        onClick={() => {handleImageClick('fracture-b-left')
+                        style={{left: '55px', top: '565px'}}
+                        onClick={() => {handleImageClick('fracture-b-safe')
                                         setIsToggled(!isToggled)}}>
                     </img>
 
                     {/* B Right Box */}
                     <img className='spike-image' src='./images/abilities/spike.webp' alt='spike' 
                         id={'1'}
-                        style={{left: '300px', top: '285px'}}
-                        onClick={() => {handleImageClick('fracture-c-right')
+                        style={{left: '120px', top: '500px'}}
+                        onClick={() => {handleImageClick('fracture-b-box')
                                         setIsToggled(!isToggled)}}>
                     </img>
                     <AgentForMap agent={agent} selectedImage={selectedImage}/>
